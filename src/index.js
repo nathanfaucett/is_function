@@ -1,11 +1,13 @@
+var isNullOrUndefined = require("is_null_or_undefined");
+
+
 var Object_toString = Object.prototype.toString,
-    reFunction, isFunction;
+    isFunction;
 
 
 if (Object_toString.call(function() {}) === "[object Object]") {
-    reFunction = /\bfunction\b/;
     isFunction = function isFunction(value) {
-        return reFunction.test(Object_toString.call(value));
+        return !isNullOrUndefined(value) && value.constructor === Function;
     };
 } else if (typeof(/./) === "function" || (typeof(Uint8Array) !== "undefined" && typeof(Uint8Array) !== "function")) {
     isFunction = function isFunction(value) {
