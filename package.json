@@ -7,6 +7,9 @@
     "url": "https://github.com/nathanfaucett/is_function.git"
   },
   "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "is_function",
     "is_function.js"
@@ -19,8 +22,5 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jsbeautifier": "^0.2.7",
     "mocha": "^2.1.0"
-  },
-  "dependencies": {
-    "is_null_or_undefined": "git://github.com/nathanfaucett/is_null_or_undefined.git"
   }
 }
