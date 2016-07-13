@@ -1,4 +1,11 @@
 isFunction
 =======
 
-isFunction for the browser and node.js
+checks if value is a function
+
+```javascript
+var isFunction = require("@nathanfaucett/is_function");
+
+
+isFunction(function someFunction() {}); // true
+```
